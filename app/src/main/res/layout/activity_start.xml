@@ -41,5 +41,19 @@
         android:layout_marginTop="50dp"
         android:onClick="startQuiz"
         android:text="@string/start_hard" />
+    <TextView
+        android:id="@+id/text_view"
+        android:scrollbars="vertical"
+        android:maxLines="1000"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9" />
+
+    <Button
+        android:text="@string/authorise"
+        android:onClick="authorise"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
 
 </LinearLayout>

@@ -32,15 +32,12 @@ public class ResultsActivity extends AppCompatActivity {
         int quizMode = getIntent().getIntExtra("QUIZ_MODE", 0);
         Log.v("MODE_OPTIONS", quizMode + "");
 
-        System.out.println(totalScore);
-        System.out.println(totalScoreHard);
-
         if (quizMode == 2) {
+            System.out.println("totalScoreHard" + totalScoreHard);
             //totalScoreHard += score;
-            System.out.println(totalScoreHard);
         } else {
+            System.out.println("totalScoreEasy" + totalScore);
             //totalScore += score;
-            System.out.println(totalScore);
         }
 
         resultsLabel.setText(score + " / " + amountQuestions);
