@@ -29,17 +29,14 @@ public class ResultsActivity extends AppCompatActivity {
         int totalScore = settings.getInt("totalScore", 0);
         int totalScoreHard = settings.getInt("totalScoreHard", 0);
 
-        int quizMode = getIntent().getIntExtra("QUIZ_MODE", 0);
-        Log.v("MODE_OPTIONS", quizMode + "");
 
+/*
         if (quizMode == 2) {
-            System.out.println("totalScoreHard" + totalScoreHard);
-            //totalScoreHard += score;
+            totalScoreHard += score;
         } else {
-            System.out.println("totalScoreEasy" + totalScore);
-            //totalScore += score;
+            totalScore += score;
         }
-
+*/
         resultsLabel.setText(score + " / " + amountQuestions);
         scoresLabel.setText("Total Score (Easy Mode): " + totalScore + "\n Total Score (Hard Mode): " + totalScoreHard);
 
@@ -50,14 +47,17 @@ public class ResultsActivity extends AppCompatActivity {
         } else {
             perfectScoreLabel.setText("Better Luck next time...");
         }
-
+        int quizMode = getIntent().getIntExtra("QUIZ_MODE", 0);
+        Log.v("MODE_OPTIONS", quizMode + "");
         //Update total score
         SharedPreferences.Editor editor = settings.edit();
-        //if (quizMode == 2) {
-            editor.putInt("totalScoreHard", totalScoreHard);
-        //} else {
+        if (quizMode == 2) {
+            editor.putInt("totalScore", totalScoreHard);
+            Log.d("CREATION", "Testing... wrote to Hard Scores");
+        } else {
             editor.putInt("totalScore", totalScore);
-        //}
+            Log.d("CREATION", "Testing... wrote to Easy Scores");
+        }
         editor.apply();
 
 
