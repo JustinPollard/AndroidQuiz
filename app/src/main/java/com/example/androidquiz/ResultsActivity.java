@@ -51,13 +51,13 @@ public class ResultsActivity extends AppCompatActivity {
         Log.v("MODE_OPTIONS", quizMode + "");
         //Update total score
         SharedPreferences.Editor editor = settings.edit();
-        if (quizMode == 2) {
-            editor.putInt("totalScore", totalScoreHard);
-            Log.d("CREATION", "Testing... wrote to Hard Scores");
-        } else {
+        //if (quizMode == 2) {
+        //    editor.putInt("totalScore", totalScoreHard);
+        //   Log.d("CREATION", "Testing... wrote to Hard Scores");
+        //} else {
             editor.putInt("totalScore", totalScore);
             Log.d("CREATION", "Testing... wrote to Easy Scores");
-        }
+        //}
         editor.apply();
 
 
