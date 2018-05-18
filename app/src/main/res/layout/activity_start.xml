@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.androidquiz.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/space_quiz_image"
+        app:srcCompat="@drawable/spacequiztitleimage" />
+
+    <TextView
+        android:id="@+id/scoresLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:text="@string/total_score_0" />
+
+    <Button
+        android:id="@+id/startEasy"
+        android:layout_width="@dimen/startBtn_width"
+        android:layout_height="@dimen/startBtn_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:onClick="startQuiz"
+        android:text="@string/start_easy" />
+
+    <Button
+        android:id="@+id/startHard"
+        android:layout_width="@dimen/startBtn_width"
+        android:layout_height="@dimen/startBtn_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:onClick="startQuiz"
+        android:text="@string/start_hard" />
+
+</LinearLayout>

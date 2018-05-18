@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.androidquiz.StartActivity">
+
+    <TextView
+        android:id="@+id/countLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/question_1"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/questionLabel"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/question_title"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/answerBtn1"
+        android:layout_width="@dimen/answerBtn_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="checkAnswer"
+        android:text="@string/choice1" />
+
+    <Button
+        android:id="@+id/answerBtn2"
+        android:layout_width="@dimen/answerBtn_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:onClick="checkAnswer"
+        android:text="@string/choice2" />
+
+    <Button
+        android:id="@+id/answerBtn3"
+        android:layout_width="@dimen/answerBtn_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:onClick="checkAnswer"
+        android:text="@string/choice3" />
+
+    <Button
+        android:id="@+id/answerBtn4"
+        android:layout_width="@dimen/answerBtn_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:onClick="checkAnswer"
+        android:text="@string/choice4" />
+
+
+</LinearLayout>
